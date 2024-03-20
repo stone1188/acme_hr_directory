@@ -44,9 +44,9 @@ const init = async () => {
         INSERT INTO department(name) VALUES('math');
         INSERT INTO department(name) VALUES('english');
         INSERT INTO employees(name, department_id) VALUES('chris', 
-            (SELECT id from employees WHERE name = 'math'));
+            (SELECT id from department WHERE name = 'math'));
         INSERT INTO employees(name, department_id) VALUES('sarah', 
-            (SELECT id from employees WHERE name = 'english'));
+            (SELECT id from department WHERE name = 'english'));
     
     `;
     
